@@ -1,0 +1,48 @@
+﻿@model IEnumerable<BusApplication.Entity.Customer>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink("Register","Create")
+<br/>
+@if (TempData["Message"] != null)
+{
+    @Html.Label((string)TempData["Message"])
+}
+@foreach (BusApplication.Entity.Customer user in @Model)
+{
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>
+                @user.userName
+            </td>
+            <td>
+                @user.userGender
+            </td>
+            <td>
+                @user.userId
+            </td>
+            <td>
+                @user.userPassword
+            </td>
+            <td>
+                @user.userPhone
+            </td>
+            <td>
+                @user.dateOfBirth
+            </td>
+            <td>
+                @user.isAdmin
+            </td>
+            <td>
+                @user.country
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { name = user.userId })
+                @Html.ActionLink("Delete", "Delete", new { name = user.userId })
+            </td>
+        </tr>
+    </table>
+}

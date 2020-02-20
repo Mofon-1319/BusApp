@@ -1,0 +1,40 @@
+﻿@model BusApplication.Entity.Customer
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+<br />
+@if (TempData["Message"] != null)
+{
+    <strong>
+        @Html.Label((string)TempData["Message"])
+    </strong>
+}
+@using (Html.BeginForm())
+{
+    <table cellpadding="10">
+        <tr>
+            <td>
+                @Html.Label("Email Id")
+            </td>
+            <td>
+                @Html.EditorFor(Model => Model.userId)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Password")
+            </td>
+            <td>
+                @Html.EditorFor(Model => Model.userPassword)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" id="Add" />
+            </td>
+
+        </tr>
+    </table>
+}

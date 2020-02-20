@@ -1,0 +1,89 @@
+﻿@model BusApplication.Entity.Customer
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "BusApp", FormMethod.Post))
+{
+    <table cellpadding="10">
+        <tr>
+            <td>
+                @Html.Label("Name")
+            </td>
+            <td>
+                @Html.TextBoxFor(Model => Model.userName)
+                @Html.ValidationMessageFor(Model => Model.userName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Gender")
+            </td>
+            <td>
+                @Html.RadioButtonFor(Model => Model.userGender, "Male") Male
+                @Html.RadioButtonFor(Model => Model.userGender, "Female") Female
+                @Html.ValidationMessageFor(Model => Model.userGender)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Email Id")
+            </td>
+            <td>
+                @Html.TextBoxFor(Model => Model.userId)
+                @Html.ValidationMessageFor(Model => Model.userId)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Password")
+            </td>
+            <td>
+                @Html.EditorFor(Model => Model.userPassword)
+                @Html.ValidationMessageFor(Model => Model.userPassword)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Phone")
+            </td>
+            <td>
+                @Html.EditorFor(Model => Model.userPhone)
+                @Html.ValidationMessageFor(Model => Model.userPhone)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("DOB")
+            </td>
+            <td>
+                @Html.EditorFor(Model => Model.dateOfBirth)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(Model => Model.isAdmin)
+            </td>
+            <td>
+                @Html.CheckBoxFor(Model => Model.isAdmin)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Country")
+            </td>
+            <td>
+                @Html.EnumDropDownListFor(Model=>Model.country,"Select Country")
+                @Html.ValidationMessageFor(Model => Model.country)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="create" />
+            </td>
+
+        </tr>
+    </table>
+}
