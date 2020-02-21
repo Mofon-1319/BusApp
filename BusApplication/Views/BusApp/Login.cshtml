@@ -11,6 +11,13 @@
         @Html.Label((string)TempData["Message"])
     </strong>
 }
+@Html.Partial("Demo2");
+@{ 
+    Html.RenderPartial("Demo2");
+}
+@{ 
+    Html.RenderAction("Demo");
+}
 @using (Html.BeginForm())
 {
     <table cellpadding="10">

@@ -155,6 +155,8 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\BusApp\Create.cshtml" />
     <Content Include="Views\BusApp\Login.cshtml" />
+    <Content Include="Views\Shared\Demo.cshtml" />
+    <Content Include="Views\Shared\Demo2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

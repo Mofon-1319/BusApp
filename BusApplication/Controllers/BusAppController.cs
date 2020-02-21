@@ -60,7 +60,10 @@ namespace BusApplication.Controllers
             }
             return View();
         }
-
+        public ActionResult Demo()
+        {
+            return PartialView();
+        }
 
         public ActionResult Login()
         {

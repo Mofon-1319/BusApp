@@ -10,7 +10,7 @@ namespace BusApplication.Entity
         public string userName { get; set; }
 
         public string userGender { get; set; }
-
+        
         [DataType(DataType.EmailAddress)]
         public string userId { get; set; }
 
@@ -26,7 +26,7 @@ namespace BusApplication.Entity
 
         public enum Country
         {
-            India,
+            India = 1,
             America,
             Pakistan,
             Malaysia,
