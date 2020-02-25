@@ -14,6 +14,7 @@ namespace BusApplication.Controllers
         BusRepository busRepository = new BusRepository();
         public ActionResult Index()
         {
+            IEnumerable<Bus> list = BusRepository.TestBusList();
             IEnumerable<Customer> userList = busRepository.UserDetailDisplay();
             return View(userList);
         }

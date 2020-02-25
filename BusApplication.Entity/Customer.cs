@@ -7,6 +7,7 @@ namespace BusApplication.Entity
 {
     public class Customer
     {
+       [Required]
         public string userName { get; set; }
 
         public string userGender { get; set; }

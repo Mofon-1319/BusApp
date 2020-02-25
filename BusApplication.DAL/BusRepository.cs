@@ -40,5 +40,10 @@ namespace BusApplication.DAL
             }
             return count;
         }
+        public static List<Bus> TestBusList()
+        {
+            BusContext busContext = new BusContext();
+            return busContext.bus.ToList();
+        }
     }
 }
